@@ -3,15 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My</title>
-    <style>
-        body{
-            background-color: aqua;
-        }
-    </style>
+    <title>Contato</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+
 </head>
 <body>
-    <h1>MEU SITE</h1>
-     <a href="/">index</a>
+     <nav>
+        <a href="/sobre">Home</a>
+        <a href="/redes">Sobre</a>
+        <a href="/pagina">Contato</a>
+    </nav>
+
+    <div> 
+        <p>
+            Nome: {{ nome }}
+        </p>
+        <p>
+            Telefone: {{ tel }}
+        </p>
+        <p>
+            Instagram: {{ rs }} 
+        </p>
+        <p>
+            GitHub: {{ git }}
+        </p>
+    </div>
 </body>
 </html>
