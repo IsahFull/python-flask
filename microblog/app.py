@@ -23,6 +23,19 @@ def redes ():
 def soma (num1, num2):
     return f'Total: {num1 + num2}'
 
+@app.route('/subtracao/<int:num1>/<int:num2>')
+def subtracao(num1, num2):
+    return f'Total da subtração: {num1 - num2}'
+
+@app.route('/multiplicacao/<int:num1>/<int:num2>')
+def multiplicacao(num1, num2):
+    return f'Total da multiplicação: {num1 * num2}'
+
+@app.route('/divisao/<int:num1>/<int:num2>')
+def divisao(num1, num2):
+    if num2 == 0:
+        return 'Erro! Divisão por zero não é permitida.'
+    return f'Total da divisão: {num1 / num2}'
 
 if __name__ == '__main__':
     app.run()
