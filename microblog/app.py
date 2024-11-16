@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -42,5 +42,42 @@ def divisao(num1, num2):
 def sobre ():
     return  render_template('sobre.html')
 
+#ROTA PARA FORM DADOS
+@app.route('/dados')
+def dados ():
+    return  render_template('dados.html')
+
+#ROTA PARA FORM DADOS GET
+@app.route('/recebedados', methods=['GET'])
+def recebedados():
+    nome = request.args.get("nome")  # Pega o valor enviado no campo 'nome'
+    email = request.args.get("email") # Pega o valor enviado no campo 'email'
+    if nome and email:  # Verifica se um valor foi enviado
+        return f"Nome e email recebidos:" "{} - {}" .format (nome, email)
+    else:
+        return "Nenhum dado foi enviado. Por favor, preencha os campos."
+
+#ROTA PARA FORM DADOS POST
+#@app.route('/recebedados', methods=['POST'])
+#def recebedados():
+  #  nome = request.form.get("nome")  # Pega o valor enviado no campo 'nome'
+  #  email = request.form.get("email") # Pega o valor enviado no campo 'email'
+  #  if nome and email:  # Verifica se um valor foi enviado
+  #      return f"Nome e email recebidos:" "{} e {}" .format (nome, email)
+   # else:
+   #     return "Nenhum dado foi enviado. Por favor, preencha os campos."
+
+    #ROTA PARA FORM DADOS POST -CAMPOS ESPECIAIS HTML-
+#@app.route('/recebedados', methods=['POST'])
+#def recebedados():
+    #estado = request.form['estado'] #que vai receber ou RN, ou PB, ou PE ou CE
+
+#@app.route('/recebedados', methods=['POST'])
+#def recebedados():
+    #estado = request.form['formacao'] #que vai receber ou fundamental, ou medio, ou superior
+
+#@app.route('/recebedados', methods=['POST'])
+#def recebedados():
+    #estado = request.form.getlist('modalidades') #que vai ter todos os valores selecionados pelo usuário
 if __name__ == '__main__':
     app.run()
