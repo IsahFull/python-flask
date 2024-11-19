@@ -47,25 +47,35 @@ def sobre ():
 def dados ():
     return  render_template('dados.html')
 
+#@app.route('/dados' methods=['GET', 'POST'])
+#def dados ():
+    #if request.method == "GET": 
+    #return  render_template('dados.html')
+ #elif request.method == "POST":
+    #nome = request.form["nome"]  # Pega o valor enviado no campo 'nome'
+#email = request.form["email"] # Pega o valor enviado no campo 'email'
+    #return f "Nome:" {nome} "Email: " {email}
+
+
 #ROTA PARA FORM DADOS GET
-@app.route('/recebedados', methods=['GET'])
-def recebedados():
-    nome = request.args.get("nome")  # Pega o valor enviado no campo 'nome'
-    email = request.args.get("email") # Pega o valor enviado no campo 'email'
-    if nome and email:  # Verifica se um valor foi enviado
-        return f"Nome e email recebidos:" "{} - {}" .format (nome, email)
-    else:
-        return "Nenhum dado foi enviado. Por favor, preencha os campos."
+#@app.route('/recebedados', methods=['GET'])
+#def recebedados():
+    #nome = request.args.get("nome")  # Pega o valor enviado no campo 'nome'
+    #email = request.args.get("email") # Pega o valor enviado no campo 'email'
+    #if nome and email:  # Verifica se um valor foi enviado
+        #return f"Nome e email recebidos:" "{} - {}" .format (nome, email)
+    #else:
+        #return "Nenhum dado foi enviado. Por favor, preencha os campos."
 
 #ROTA PARA FORM DADOS POST
-#@app.route('/recebedados', methods=['POST'])
-#def recebedados():
-  #  nome = request.form.get("nome")  # Pega o valor enviado no campo 'nome'
-  #  email = request.form.get("email") # Pega o valor enviado no campo 'email'
-  #  if nome and email:  # Verifica se um valor foi enviado
-  #      return f"Nome e email recebidos:" "{} e {}" .format (nome, email)
-   # else:
-   #     return "Nenhum dado foi enviado. Por favor, preencha os campos."
+@app.route('/recebedados', methods=['POST'])
+def recebedados():
+    nome = request.form.get("nome")  # Pega o valor enviado no campo 'nome'
+    email = request.form.get("email") # Pega o valor enviado no campo 'email'
+    if nome and email:  # Verifica se um valor foi enviado
+        return f"Nome e email recebidos:" "{} e {}" .format (nome, email)
+    else:
+      return "Nenhum dado foi enviado. Por favor, preencha os campos."
 
     #ROTA PARA FORM DADOS POST -CAMPOS ESPECIAIS HTML-
 #@app.route('/recebedados', methods=['POST'])

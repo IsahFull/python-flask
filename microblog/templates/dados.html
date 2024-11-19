@@ -15,20 +15,35 @@
         <button type="submit">Enviar</button>
     </form-->
 
-    <div class="container">
+    <!--div class="container">
         <h1>Formulário de Dados</h1>
         <form action="{{ url_for('recebedados') }}" method="get" class="form">
-            <!-- Campo Nome -->
+            
             <div class="form-group">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
             </div>
 
-            <!-- Campo Email -->
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required />
+            </div-->
+            <div class="container">
+                <h1>Formulário de Dados</h1>
+            <form action="{{url_for('recebedados')}}" method="post" class="form">
+                <!-- Campo Nome -->
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+            </div>
+
+                <!-- Campo Email -->
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Digite seu email" required />
             </div>
+             
 
             <!--CAMPOS ESPECIAIS-->
             <!-- Campo Select Estado -->
@@ -84,19 +99,6 @@
 
         <button type="submit" class="btn">Enviar</button>
      </form>
-
-     <!--<form action="{{url_for('recebedados')}}" method="post" class="form">
-        <div class="form-group">
-            <label for="nome"> Nome: </label>
-            <input type="text" name="nome"><br/>
-        </div>
-
-        <div class="form-group">
-            <label>E-mail: </label>
-            <input type="text" name="email"><br/>
-        </div>
-        <button type="submit" class="btn">Enviar</button>
-     </form-->
 
      <!--CAMPOS ESPECIAIS
      <select name="estado">
