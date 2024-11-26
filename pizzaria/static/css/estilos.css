@@ -1,3 +1,4 @@
+/* Página de Base e outros detalhes */
 body{
     background-color: #f8f9fa;
     font-family: Arial, sans-serif;
@@ -33,30 +34,6 @@ nav a:hover {
     border-radius: 5px;
 }
 
-.container {
-    margin: 20px;
-}
-
-section img {
-    width: 200px;
-    height: auto;
-    border-radius: 100%;
-}
-
-section img{
-    float: left;
-    margin-right: 30px;
-}
-
-aside ul {
-    list-style: circle;
-    padding: 0;
-}
-
-section ul {
-    margin-left: 250px;
-}
-
 footer {
     background-color: rgb(153, 188, 130);
     color: white;
@@ -67,17 +44,7 @@ footer {
     padding: 10px;
 }
 
-footer a{
-    color: white;
-    text-decoration: underline;
-    
-}
-
-footer a:hover{
-    text-decoration: none;
-}
-
-/* Estilo para a página de Avaliações */
+/* Página de Avaliações */
 .avaliacoes h1 {
     color: #12a888;
     text-align: center;
@@ -97,11 +64,11 @@ footer a:hover{
     margin: 10px 0;
     font-size: 16px;
     line-height: 2.5;
-    list-style-position: inside; /* Move os pontinhos para dentro do padding */
-    padding-left: 20px; /* Aumenta a distância entre os marcadores e a borda esquerda */
+    list-style-position: inside; 
+    padding-left: 20px; 
 }
 
-/* Estilo para a página Fale Conosco */
+/* Página Fale Conosco */
 .fale-conosco h1 {
     color: #12a888;
     text-align: center;
@@ -145,7 +112,7 @@ footer a:hover{
     background-color: #1bd094;
 }
 
-/* Estilo para a página Login */
+/* Página Login */
 .login h1 {
     color: #12a888;
     text-align: center;
@@ -190,28 +157,28 @@ footer a:hover{
 
 /* alinhando cardapio */
 .cardapio {
-    text-align: center; /* Centraliza o título */
+    text-align: center;
 }
 
 .cardapio ul {
-    display: inline-block; /* Centraliza a lista na página */
-    text-align: left; /* Alinha o conteúdo da lista à esquerda */
+    display: inline-block; 
+    text-align: left; 
     padding: 0;
     margin: 20px auto;
 }
 
 .cardapio li {
-    margin-bottom: 20px; /* Espaçamento entre pizzas */
-    list-style-type: none; /* Remove os marcadores padrão */
+    margin-bottom: 20px; 
+    list-style-type: none;
 }
 
 .cardapio li strong {
-    font-size: 1.2em; /* Destaque para o nome da pizza */
+    font-size: 1.2em; 
 }
 
 .cardapio p {
-    margin: 5px 0 0; /* Espaçamento entre o nome e os ingredientes */
-    font-style: italic; /* Deixa os ingredientes em itálico */
-    font-size: 0.9em; /* Fonte menor para os ingredientes */
-    color: #555; /* Cor mais suave */
+    margin: 5px 0 0; 
+    font-style: italic; 
+    font-size: 0.9em; 
+    color: #555; 
 }

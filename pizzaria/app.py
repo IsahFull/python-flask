@@ -33,13 +33,13 @@ def cardapio():
     ]
     return render_template("cardapio.html", pizzas=pizzas)
 
-#novas paginas
+#paginas solicitadas
 @app.route('/avaliacoes')
 def avaliacoes():
     avaliacoes = [
-        {"cliente": "João", "comentario": "Pizza deliciosa!"},
-        {"cliente": "Maria", "comentario": "Atendimento excelente e pizza quentinha!"},
-        {"cliente": "Carlos", "comentario": "Melhor pizzaria da cidade!"}
+        {"cliente": "Melissa", "comentario": "Pizza deliciosa!"},
+        {"cliente": "Ikaro", "comentario": "Atendimento excelente e pizza quentinha!"},
+        {"cliente": "Florentina", "comentario": "Melhor pizzaria da cidade!"}
     ]
     return render_template("avaliacoes.html", avaliacoes=avaliacoes)
 
@@ -50,8 +50,8 @@ def faleconosco():
         nome = request.form.get('nome')
         email = request.form.get('email')
         mensagem = request.form.get('mensagem')
-        # Aqui você poderia salvar ou processar os dados
-        return f"Obrigado pela mensagem, {nome}!"
+        #processamento
+        return f"Agradecemos pela mensagem, {nome}!"
     return render_template("faleconosco.html")
 
 
@@ -60,10 +60,10 @@ def login():
     if request.method == 'POST':
         usuario = request.form.get('usuario')
         senha = request.form.get('senha')
-        # Autenticação simplificada
-        if usuario == "admin" and senha == "1234":
+        # autenticação 
+        if usuario == "isah" and senha == "1306":
             return "Login realizado com sucesso!"
-        return "Usuário ou senha inválidos!"
+        return "Usuário ou senha inválidos, tente novamente!"
     return render_template("login.html")
 
 if __name__ == '__main__':
