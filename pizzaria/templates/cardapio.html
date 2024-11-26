@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
 {% block conteudo %}
-<h1>Cardápio</h1>
-<ul>
-   {% for pizza in pizzas %}
-        <li>{{ pizza.nome }} - R$ {{ pizza.preco }}
-            <ul>
-                <li>{{ pizza.ingredientes }}</li>
-            </ul>
-        </li>
-     {% endfor %}
-
-</ul>
+<div class="cardapio">
+    <h1>Cardápio</h1>
+    <ul>
+        {% for pizza in pizzas %}
+            <li>
+                <strong>{{ pizza.nome }}</strong> - R$ {{ pizza.preco }}
+                <p>{{ pizza.ingredientes }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}
