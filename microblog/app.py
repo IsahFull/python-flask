@@ -47,16 +47,6 @@ def sobre ():
 def dados ():
     return  render_template('dados.html')
 
-#@app.route('/dados' methods=['GET', 'POST'])
-#def dados ():
-    #if request.method == "GET": 
-    #return  render_template('dados.html')
- #elif request.method == "POST":
-    #nome = request.form["nome"]  # Pega o valor enviado no campo 'nome'
-#email = request.form["email"] # Pega o valor enviado no campo 'email'
-    #return f "Nome:" {nome} "Email: " {email}
-
-
 #ROTA PARA FORM DADOS GET
 #@app.route('/recebedados', methods=['GET'])
 #def recebedados():
